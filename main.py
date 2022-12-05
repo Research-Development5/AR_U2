@@ -80,7 +80,7 @@ if choose=='Record voice':
                 #file_name=str(int(latest_file.split('/')[1].split('.wav')[0])+1)
                 file_name=str(int(latest_file.split('/')[1].split('_')[2].split('.')[0])+1)
             except:
-                file_name='1'
+                file_name='718'
             path_myrecording = f"./recorded_voices/user_2_"+file_name+".wav"
             wav_file = open(path_myrecording, "wb")
             wav_file.write(audio1.tobytes())
