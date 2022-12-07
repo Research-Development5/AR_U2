@@ -34,7 +34,7 @@ sheet = client.open("recorded voices").get_worksheet(1)
 existing=gd.get_as_dataframe(sheet)
 x=len(existing)
 def functionality():
-         card(title=df[x], text='', image="https://images.pexels.com/photos/2341290/pexels-photo-2341290.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1")
+         card(title=df[0], text='', image="https://images.pexels.com/photos/2341290/pexels-photo-2341290.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1")
        # wks = client.open("recorded voices").worksheet(javeria)
     #sheet = client.open("recorded voices").worksheet(javeria)
     #y=str( sheet.cell(col=2,row=x))
