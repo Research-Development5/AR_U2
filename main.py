@@ -39,7 +39,7 @@ existing=gd.get_as_dataframe(sheet)
 x=len(existing)
 
 def functionality():
-    card(title=df[0], text=' ', image="https://images.pexels.com/photos/2341290/pexels-photo-2341290.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1")
+    card(title=df[x], text=' ', image="https://images.pexels.com/photos/2341290/pexels-photo-2341290.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1")
 
 
 with st.sidebar:
