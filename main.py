@@ -39,7 +39,7 @@ def functionality():
     #sheet = client.open("recorded voices").worksheet(javeria)
     #y=str( sheet.cell(col=2,row=x))
    # file_name=str(int(y.split('/')[1].split('_')[2].split('.')[0])+1)
-    print(x)
+    #print(x)
     #print(file_name)
 
 
