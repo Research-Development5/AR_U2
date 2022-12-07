@@ -98,7 +98,7 @@ if choose=='Record voice':
                 sheet = client.open("recorded voices").get_worksheet(1)
                 existing=gd.get_as_dataframe(sheet)
                 x=len(existing)
-                file_name=str(x)
+                file_name=str(x+1)
             path_myrecording = f"./recorded_voices/user_2_"+file_name+".wav"
             wav_file = open(path_myrecording, "wb")
             wav_file.write(audio1.tobytes())
