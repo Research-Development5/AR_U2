@@ -1,3 +1,5 @@
+
+
 import streamlit as st
 import pandas as pd
 from streamlit_card import card
@@ -9,6 +11,8 @@ import os
 from record import record,save_record,read_audio
 import numpy as np
 import glob
+
+
 import numpy as np
 import streamlit as st
 from io import BytesIO
@@ -33,14 +37,9 @@ sheet = client.open("recorded voices").get_worksheet(1)
 #sheet = client.open("recorded voices").sheet1
 existing=gd.get_as_dataframe(sheet)
 x=len(existing)
+
 def functionality():
-         card(title=df[0], text='', image="https://images.pexels.com/photos/2341290/pexels-photo-2341290.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1")
-       # wks = client.open("recorded voices").worksheet(javeria)
-    #sheet = client.open("recorded voices").worksheet(javeria)
-    #y=str( sheet.cell(col=2,row=x))
-   # file_name=str(int(y.split('/')[1].split('_')[2].split('.')[0])+1)
-    #print(x)
-    #print(file_name)
+    card(title=df[x], text=' ', image="https://images.pexels.com/photos/2341290/pexels-photo-2341290.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1")
 
 
 with st.sidebar:
