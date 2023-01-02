@@ -109,7 +109,7 @@ if choose=='Record voice':
             final.to_csv('final.csv',index=False)
             st.write('File Saved')
             st.session_state["counter"] = 0
-            st.session_state["rec"]=None
+            #st.session_state["rec"]=None
             df.to_csv('voices_unavailable.csv',index=False)
             st.experimental_rerun()
 if choose=='Data recorded / Upload':
