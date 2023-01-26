@@ -31,12 +31,12 @@ def local_css(file_name):
         st.markdown(f'<style>{f.read()}</style>', unsafe_allow_html=True)
 local_css('style.css')
 st.image(image='HeaderBanner.jpg')
-credentials = ServiceAccountCredentials.from_json_keyfile_name("voices-367409-3c9e0403a16a.json", scope)
-client = gspread.authorize(credentials)
-sheet = client.open("recorded voices").get_worksheet(1)
+#credentials = ServiceAccountCredentials.from_json_keyfile_name("voices-367409-3c9e0403a16a.json", scope)
+#client = gspread.authorize(credentials)
+#sheet = client.open("recorded voices").get_worksheet(1)
 #sheet = client.open("recorded voices").sheet1
-existing=gd.get_as_dataframe(sheet)
-x=len(existing)
+#existing=gd.get_as_dataframe(sheet)
+#x=len(existing)
 
 def functionality():
     credentials = ServiceAccountCredentials.from_json_keyfile_name("voices-367409-3c9e0403a16a.json", scope)
@@ -89,6 +89,12 @@ if choose=='Record voice':
             st.warning('voice not recorded yet first record it please')
         else:
             df=pd.read_csv('voices_unavailable.csv')
+            credentials = ServiceAccountCredentials.from_json_keyfile_name("voices-367409-3c9e0403a16a.json", scope)
+            client = gspread.authorize(credentials)
+            sheet = client.open("recorded voices").get_worksheet(1)
+            #sheet = client.open("recorded voices").sheet1
+            existing=gd.get_as_dataframe(sheet)
+            x=len(existing)
             word=df['word'][x]
             df=df.drop(df.loc[df['word']==word].index.values)
             final= pd.read_csv('final.csv')
